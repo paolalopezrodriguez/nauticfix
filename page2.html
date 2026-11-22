@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Elige fecha y hora para tu cita de servicio náutico.">
+  <title>Agendar cita | NauticFix</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="homepage.html" aria-label="NauticFix, inicio">
+          <img class="brand-logo" src="imagenes/Frame%202%20(1).png" alt="">
+          <span class="brand-copy"><strong>NauticFix</strong><span class="brand-tagline">Tu embarcación, en buenas manos</span><span class="brand-location">Servicio en Ceiba, Puerto Rico</span></span>
+        </a>
+        <div class="brand-copy"><a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a><span>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</span></div>
+        <a class="support" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20NauticFix">Soporte prioritario →</a>
+      </div>
+      <nav id="mainNavigation" aria-label="Navegación principal">
+        <a class="button" href="homepage.html">Inicio</a>
+        <a class="button button-primary" href="page1.html" aria-current="page">Agendar cita</a>
+        <a class="button" href="page3.html">Seguimiento</a>
+        <a class="button" href="page4.html">Soporte</a>
+        <a class="button" href="page5.html">Mi cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Paso 2 de 3 · Fecha y hora</span>
+        <h1>Elige cuándo visitarnos</h1>
+        <p class="hero-copy">Selecciona una fecha y un horario. Esta demo guarda la solicitud en este navegador; no procesa pagos ni verifica la disponibilidad real del taller.</p>
+        <ol class="steps" aria-label="Pasos para reservar">
+          <li>Servicio y datos</li>
+          <li aria-current="step">Fecha y depósito</li>
+          <li>Confirmación y seguimiento</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-two">
+        <form class="card" id="appointmentForm">
+          <h2>Disponibilidad de citas</h2>
+          <p>Horario del taller: lunes a viernes, 7:00 a.m. – 4:00 p.m. Los horarios ocupados por citas guardadas en este navegador no se podrán volver a seleccionar.</p>
+          <p>
+            <label for="appointmentDate">Fecha preferida</label><br>
+            <input id="appointmentDate" name="appointmentDate" type="date" required>
+          </p>
+          <p>
+            <label for="appointmentTime">Hora preferida</label><br>
+            <select id="appointmentTime" name="appointmentTime" required>
+              <option value="">Selecciona un horario</option>
+              <option value="7:00 a.m.">7:00 a.m.</option>
+              <option value="8:00 a.m.">8:00 a.m.</option>
+              <option value="9:00 a.m.">9:00 a.m.</option>
+              <option value="10:00 a.m.">10:00 a.m.</option>
+              <option value="11:00 a.m.">11:00 a.m.</option>
+              <option value="12:00 p.m.">12:00 p.m.</option>
+              <option value="1:00 p.m.">1:00 p.m.</option>
+              <option value="2:00 p.m.">2:00 p.m.</option>
+              <option value="3:00 p.m.">3:00 p.m.</option>
+            </select>
+          </p>
+          <p id="inspectionPrice" role="status" aria-live="polite">El costo de inspección aparecerá según la ubicación que indicaste.</p>
+          <p><label><input id="depositAcknowledged" type="checkbox" required> Entiendo que el depósito de $30.00 se debe coordinar con el taller para confirmar la cita. Esta demo no cobra el depósito.</label></p>
+          <p><button class="button button-primary" id="confirmAppointment" type="submit">Confirmar solicitud de cita</button></p>
+          <p id="appointmentMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="card services" aria-labelledby="summaryTitle">
+          <h2 id="summaryTitle">Resumen de tu servicio</h2>
+          <dl>
+            <dt>Servicio</dt><dd id="summaryService">Completa primero los detalles del servicio.</dd>
+            <dt>Embarcación</dt><dd id="summaryBoat">—</dd>
+            <dt>Solicitud</dt><dd id="summaryIssue">—</dd>
+            <dt>Tipo de trabajo</dt><dd id="summaryWorkType">—</dd>
+            <dt>Ubicación</dt><dd id="summaryLocation">—</dd>
+            <dt>Inspección</dt><dd id="summaryInspection">—</dd>
+            <dt>Contacto</dt><dd id="summaryCustomer">—</dd>
+            <dt>Depósito requerido</dt><dd class="deposit">$30.00</dd>
+          </dl>
+          <p>Al confirmar, verás un resumen de la fecha, la referencia y una foto ilustrativa de la embarcación. La confirmación es local y no se envía al taller.</p>
+          <p><a href="page1.html">← Volver a los detalles del servicio</a></p>
+          <figure class="service-image">
+            <img src="imagenes/boat.jpg" alt="Embarcación en el muelle">
+            <figcaption>Coordina tu visita con nuestro taller en Ceiba.</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="appointmentGuideTitle">
+      <div class="container">
+        <article class="card">
+          <h2 id="appointmentGuideTitle">Antes de elegir fecha y hora</h2>
+          <p>El horario elegido expresa una preferencia y no confirma la disponibilidad del taller. Esta demostración guarda datos en el navegador; no envía una reserva al personal ni procesa pagos. Para confirmar una cita real, escribe a NauticFix y espera respuesta. Si necesitas cambiar la fecha, comparte tu referencia y propone alternativas de horario. Considera el traslado hasta la embarcación y coordina el acceso al muelle o a la marina. El atraque y sus costos no forman parte del depósito. Antes de desplazarte, revisa los pronósticos y avisos marinos. Si las condiciones son inseguras, contacta al taller para acordar otra fecha.</p>
+          <h3>Referencias</h3>
+          <ul class="footer-links">
+            <li>National Weather Service, Marine Forecasts: <a href="https://www.weather.gov/marine/" target="_blank" rel="noopener noreferrer">weather.gov/marine</a>.</li>
+            <li>NauticFix, <a href="page1.html">Detalles del servicio</a> y <a href="page7.html">Términos del servicio</a>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NauticFix Workshop</h3><p>Servicio náutico en Ceiba, Puerto Rico.</p></div>
+        <div><h3>Tu solicitud</h3><ul class="footer-links"><li><a href="page1.html">Detalles del servicio</a></li><li><a href="page3.html">Seguimiento</a></li></ul></div>
+        <div><h3>¿Necesitas ayuda?</h3><ul class="footer-links"><li><a href="page4.html">Centro de soporte</a></li><li><a href="mailto:soporte@nauticfixpr.com">Enviar un correo</a></li></ul></div>
+      </div>
+      <p><a href="page6.html">Política de privacidad</a> · <a href="page7.html">Términos del servicio</a></p>
+      <p class="copyright">© 2026 NauticFix · Paola Lopez · Universidad Interamericana, Recinto de Fajardo · <a href="mailto:paola9727@interfajardo.edu">paola9727@interfajardo.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>

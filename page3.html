@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta el detalle y el estado de tu cita o reparación náutica.">
+  <title>Seguimiento de reparación | NauticFix</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="homepage.html" aria-label="NauticFix, inicio">
+          <img class="brand-logo" src="imagenes/Frame%202%20(1).png" alt="">
+          <span class="brand-copy"><strong>NauticFix</strong><span class="brand-tagline">Tu embarcación, en buenas manos</span><span class="brand-location">Servicio en Ceiba, Puerto Rico</span></span>
+        </a>
+        <div class="brand-copy"><a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a><span>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</span></div>
+        <a class="support" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20NauticFix">Soporte prioritario →</a>
+      </div>
+      <nav id="mainNavigation" aria-label="Navegación principal">
+        <a class="button" href="homepage.html">Inicio</a>
+        <a class="button" href="page1.html">Agendar cita</a>
+        <a class="button button-primary" href="page3.html" aria-current="page">Seguimiento</a>
+        <a class="button" href="page4.html">Soporte</a>
+        <a class="button" href="page5.html">Mi cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Citas y reparaciones</span>
+        <h1>Consulta el estado de tu servicio</h1>
+        <p class="hero-copy">Consulta el estado vigente de tu reparación, el detalle del trabajo y sus evidencias con fecha y hora.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="card tracking-search" id="trackingForm">
+          <h2>Buscar por número de referencia</h2>
+          <p>Ingresa la referencia de tu cita para ver el estado y las actualizaciones disponibles.</p>
+          <p>
+            <label for="reference">Número de referencia</label><br>
+            <input id="reference" name="reference" type="text" maxlength="40" placeholder="Ej. NFX-DEMO" required>
+          </p>
+          <p><button class="button button-primary" type="submit">Consultar estado</button></p>
+          <p id="trackingMessage" role="status" aria-live="polite">Prueba la vista simulada con <strong>NFX-DEMO</strong>. Las citas reales aparecen aquí después de confirmarlas.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="trackingGuideTitle">
+      <div class="container">
+        <article class="card">
+          <h2 id="trackingGuideTitle">Cómo consultar una actualización</h2>
+          <p>Escribe la referencia como aparece en la confirmación. En un servicio real, ayuda a localizar la cita y relacionar las novedades con la embarcación. Si no encuentras el número, contacta al taller con tu nombre, correo y fecha aproximada. No divulgues la referencia. Una actualización puede indicar que el trabajo está pendiente de evaluación, en proceso o listo para conversar contigo. Las fotografías son apoyo visual, no sustituyen la explicación del técnico ni una inspección presencial. NFX-DEMO muestra datos ilustrativos; esta demostración local no transmite solicitudes. Para confirmar una reparación real, escribe a soporte e incluye solo los datos necesarios.</p>
+          <h3>Referencias</h3>
+          <ul class="footer-links">
+            <li>NauticFix, <a href="page1.html">Solicitud de servicio</a> y <a href="page2.html">Agendar cita</a>.</li>
+            <li>U.S. Coast Guard, Recreational Boating Safety: <a href="https://www.uscgboating.org/" target="_blank" rel="noopener noreferrer">uscgboating.org</a>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="card tracking-dialog" id="trackingDialog" aria-labelledby="trackingTitle">
+    <div class="tracking-dialog-heading">
+      <div>
+        <span class="eyebrow">Seguimiento de reparación</span>
+        <h2 id="trackingTitle">Estado de tu embarcación</h2>
+      </div>
+      <button class="tracking-dialog-close" id="closeTrackingDialog" type="button" aria-label="Cerrar seguimiento">×</button>
+    </div>
+    <div class="tracking-result-heading">
+      <span class="tracking-reference"><span>Referencia</span><strong id="trackingReference"></strong></span>
+    </div>
+    <div class="tracking-boat-summary">
+      <p><span>Embarcación</span><strong id="trackingBoat"></strong></p>
+      <p><span>Servicio</span><strong id="trackingService"></strong></p>
+      <p><span>Fecha y hora de cita</span><strong id="trackingSchedule"></strong></p>
+    </div>
+    <article class="current-repair">
+      <div class="current-repair-heading">
+        <div>
+          <span class="current-repair-label">Estado vigente</span>
+          <h3 id="trackingStageTitle"></h3>
+        </div>
+        <span class="tracking-record-status is-current" id="trackingStatus"></span>
+      </div>
+      <p class="current-repair-detail" id="trackingStageDetail"></p>
+      <p class="tracking-record-meta" id="trackingUpdatedAt"></p>
+    </article>
+    <section class="tracking-folder" aria-labelledby="trackingEvidenceTitle">
+      <div class="tracking-folder-heading">
+        <div class="folder-icon" aria-hidden="true">▰</div>
+        <div>
+          <h3 id="trackingEvidenceTitle">Evidencias de la actualización</h3>
+          <p id="trackingEvidenceSubtitle"></p>
+        </div>
+      </div>
+      <div class="tracking-evidence-grid" id="trackingEvidence"></div>
+    </section>
+    <p class="tracking-demo-note">Esta demo usa datos guardados en este navegador. Las fotos de muestra son ilustrativas, pueden no corresponder a tu embarcación y no son actualizaciones recibidas del taller.</p>
+    <button class="button button-primary tracking-dialog-done" id="closeTrackingDialogFooter" type="button">Cerrar</button>
+  </dialog>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NauticFix Workshop</h3><p>Servicio náutico en Ceiba, Puerto Rico.</p></div>
+        <div><h3>Tu solicitud</h3><ul class="footer-links"><li><a href="page1.html">Solicitar servicio</a></li><li><a href="page2.html">Agendar cita</a></li></ul></div>
+        <div><h3>¿Necesitas ayuda?</h3><ul class="footer-links"><li><a href="page4.html">Centro de soporte</a></li><li><a href="mailto:soporte@nauticfixpr.com">Enviar un correo</a></li></ul></div>
+      </div>
+      <p><a href="page6.html">Política de privacidad</a> · <a href="page7.html">Términos del servicio</a></p>
+      <p class="copyright">© 2026 NauticFix · Paola Lopez · Universidad Interamericana, Recinto de Fajardo · <a href="mailto:paola9727@interfajardo.edu">paola9727@interfajardo.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>

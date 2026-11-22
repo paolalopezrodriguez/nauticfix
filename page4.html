@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Obtén ayuda sobre tus citas y servicios náuticos con NauticFix.">
+  <title>Soporte | NauticFix</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="homepage.html" aria-label="NauticFix, inicio">
+          <img class="brand-logo" src="imagenes/Frame%202%20(1).png" alt="">
+          <span class="brand-copy"><strong>NauticFix</strong><span class="brand-tagline">Tu embarcación, en buenas manos</span><span class="brand-location">Servicio en Ceiba, Puerto Rico</span></span>
+        </a>
+        <div class="brand-copy"><a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a><span>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</span></div>
+        <a class="support" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20NauticFix">Soporte prioritario →</a>
+      </div>
+      <nav id="mainNavigation" aria-label="Navegación principal">
+        <a class="button" href="homepage.html">Inicio</a>
+        <a class="button" href="page1.html">Agendar cita</a>
+        <a class="button" href="page3.html">Seguimiento</a>
+        <a class="button button-primary" href="page4.html" aria-current="page">Soporte</a>
+        <a class="button" href="page5.html">Mi cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Estamos para ayudarte</span>
+        <h1>Soporte para tus citas y reparaciones</h1>
+        <p class="hero-copy">Consulta respuestas rápidas o registra una consulta de prueba. La demo no conecta en tiempo real con el personal; para asistencia directa, escribe a soporte@nauticfixpr.com.</p>
+        <div class="actions">
+          <a class="button button-primary" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20en%20el%20muelle">Asistencia prioritaria por correo</a>
+          <a class="button" href="page3.html">Consultar seguimiento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-two">
+        <section class="card" aria-labelledby="faqTitle">
+          <h2 id="faqTitle">Preguntas frecuentes</h2>
+          <details>
+            <summary>¿Cuánto cuesta reservar una cita?</summary>
+            <p>Se requiere un depósito de $30.00 para confirmar la cita. Comunícate con el taller para coordinar el pago.</p>
+          </details>
+          <details>
+            <summary>¿Cómo consulto el estado de mi reparación?</summary>
+            <p>Usa el número de referencia de tu cita en <a href="page3.html">Seguimiento</a> para consultar las actualizaciones del taller.</p>
+          </details>
+          <details>
+            <summary>¿Qué horario tiene el taller?</summary>
+            <p>Lunes a viernes, de 7:00 a.m. a 4:00 p.m., en Ceiba, Puerto Rico.</p>
+          </details>
+          <details>
+            <summary>¿Puedo cambiar los detalles de mi solicitud?</summary>
+            <p>Escríbenos a <a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a> con tu número de referencia y el cambio que necesitas.</p>
+          </details>
+          <h3>Asistente de orientación (demo local)</h3>
+          <p>Este asistente ofrece respuestas automáticas; no es un chat conectado con el equipo NauticFix.</p>
+          <div id="chatConversation" role="log" aria-live="polite" aria-relevant="additions"></div>
+          <form id="chatForm">
+            <p>
+              <label for="chatMessage">Escribe una pregunta sobre citas, precios o seguimiento</label><br>
+              <input id="chatMessage" name="chatMessage" type="text" maxlength="300" required>
+            </p>
+            <p><button class="button" type="submit">Consultar al asistente</button></p>
+          </form>
+        </section>
+
+        <form class="card" id="supportForm">
+          <h2>Envíanos una consulta</h2>
+          <p>Registra una consulta de prueba en este navegador. Para que el equipo la reciba, envíala también por correo.</p>
+          <p>
+            <label for="supportName">Nombre</label><br>
+            <input id="supportName" name="supportName" type="text" maxlength="100" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="supportEmail">Correo electrónico</label><br>
+            <input id="supportEmail" name="supportEmail" type="email" maxlength="160" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="supportReference">Número de referencia (opcional)</label><br>
+            <input id="supportReference" name="supportReference" type="text" maxlength="40">
+          </p>
+          <p>
+            <label for="supportTopic">Tema de la consulta</label><br>
+            <select id="supportTopic" name="supportTopic" required>
+              <option value="">Selecciona un tema</option>
+              <option value="Cita">Cita o cambio de horario</option>
+              <option value="Reparación">Estado de reparación</option>
+              <option value="Servicio">Servicios del taller</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </p>
+          <p>
+            <label for="supportMessage">Mensaje</label><br>
+            <textarea id="supportMessage" name="supportMessage" rows="5" maxlength="1500" required></textarea>
+          </p>
+          <p><button class="button button-primary" type="submit">Guardar consulta local</button></p>
+          <p id="supportStatus" role="status" aria-live="polite"></p>
+          <p><a href="mailto:soporte@nauticfixpr.com">Enviar la consulta por correo</a></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="supportGuideTitle">
+      <div class="container">
+        <article class="card">
+          <h2 id="supportGuideTitle">Cómo obtener ayuda de forma clara</h2>
+          <p>Al contactar soporte, indica si necesitas ayuda con una cita, cambio de horario, consulta detallada de servicio o actualización de reparación. Añade tu nombre, contacto y, si existe, la referencia. Resume la situación y explica qué respuesta necesitas. No envíes contraseñas, números completos de tarjetas ni documentos no solicitados. El formulario solo guarda una prueba local. Para asistencia, escribe al correo y espera confirmación del equipo. Si la embarcación supone un riesgo, prioriza la seguridad y sigue instrucciones de las autoridades marítimas; no esperes respuesta. Consulta los avisos oficiales del tiempo y coordina otra visita si las condiciones lo requieren.</p>
+          <h3>Referencias</h3>
+          <ul class="footer-links">
+            <li>U.S. Coast Guard, Recreational Boating Safety: <a href="https://www.uscgboating.org/" target="_blank" rel="noopener noreferrer">uscgboating.org</a>.</li>
+            <li>National Weather Service, Marine Forecasts: <a href="https://www.weather.gov/marine/" target="_blank" rel="noopener noreferrer">weather.gov/marine</a>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NauticFix Workshop</h3><p>Servicio náutico en Ceiba, Puerto Rico.</p></div>
+        <div><h3>Tu solicitud</h3><ul class="footer-links"><li><a href="page1.html">Solicitar servicio</a></li><li><a href="page3.html">Seguimiento</a></li></ul></div>
+        <div><h3>Contacto</h3><address><a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a><br>Ceiba, Puerto Rico<br>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</address></div>
+      </div>
+      <p><a href="page6.html">Política de privacidad</a> · <a href="page7.html">Términos del servicio</a></p>
+      <p class="copyright">© 2026 NauticFix · Paola Lopez · Universidad Interamericana, Recinto de Fajardo · <a href="mailto:paola9727@interfajardo.edu">paola9727@interfajardo.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>
