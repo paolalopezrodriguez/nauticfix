@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta tu perfil y las citas de servicio náutico de NauticFix.">
+  <title>Mi cuenta | NauticFix</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="homepage.html" aria-label="NauticFix, inicio">
+          <img class="brand-logo" src="imagenes/Frame%202%20(1).png" alt="">
+          <span class="brand-copy"><strong>NauticFix</strong><span class="brand-tagline">Tu embarcación, en buenas manos</span><span class="brand-location">Servicio en Ceiba, Puerto Rico</span></span>
+        </a>
+        <div class="brand-copy"><a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a><span>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</span></div>
+        <a class="support" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20NauticFix">Soporte prioritario →</a>
+      </div>
+      <nav id="mainNavigation" aria-label="Navegación principal">
+        <a class="button" href="homepage.html">Inicio</a>
+        <a class="button" href="page1.html">Agendar cita</a>
+        <a class="button" href="page3.html">Seguimiento</a>
+        <a class="button" href="page4.html">Soporte</a>
+        <a class="button button-primary" href="page5.html" aria-current="page">Mi cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Tu espacio NauticFix</span>
+        <h1>Tu cuenta y tus citas</h1>
+        <p class="hero-copy">Consulta tus datos y las novedades del servicio de tu embarcación.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-two">
+        <form class="card" id="profileForm">
+          <h2>Datos de contacto</h2>
+          <p id="profileDescription">Mantén actualizados tus datos de contacto.</p>
+          <p>
+            <label for="profileName">Nombre completo</label><br>
+            <input id="profileName" name="profileName" type="text" maxlength="100" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="profileEmail">Correo electrónico</label><br>
+            <input id="profileEmail" name="profileEmail" type="email" maxlength="160" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="profilePhone">Teléfono</label><br>
+            <input id="profilePhone" name="profilePhone" type="tel" maxlength="30" autocomplete="tel">
+          </p>
+          <p><button class="button button-primary" type="submit">Guardar mis datos</button></p>
+          <p id="profileStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="card services" aria-labelledby="accountTrackingTitle">
+          <h2 id="accountTrackingTitle">Seguimiento de tu embarcación</h2>
+          <p id="accountTrackingStatus">Consulta el avance del servicio y las últimas novedades del taller.</p>
+          <a class="button button-primary" id="accountTrackingLink" href="page3.html">Ver seguimiento</a>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <section class="card" aria-labelledby="accountHistoryTitle">
+          <h2 id="accountHistoryTitle">Embarcaciones y servicios registrados en este navegador</h2>
+          <p>Este historial es local a este dispositivo y no representa una cuenta sincronizada con el taller.</p>
+          <ul id="accountHistory">
+            <li>Todavía no hay servicios registrados.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-two">
+        <article class="card">
+          <h2>¿Necesitas otro servicio?</h2>
+          <p>Solicita mantenimiento de motor, electricidad, casco, cubierta o limpieza.</p>
+          <a class="button button-primary" href="page1.html">Comenzar una solicitud</a>
+        </article>
+        <article class="card">
+          <h2>¿Tienes una pregunta?</h2>
+          <p>Consulta las respuestas frecuentes o envía una consulta al centro de soporte.</p>
+          <a class="button" href="page4.html">Visitar soporte</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="accountGuideTitle">
+      <div class="container">
+        <article class="card">
+          <h2 id="accountGuideTitle">Cuida tus datos y el historial local</h2>
+          <p>El perfil es una demostración local: guardar tu nombre, correo o teléfono no crea una cuenta en un servidor ni sincroniza datos entre dispositivos. Si compartes el equipo, evita dejar información personal guardada y cierra la página al terminar. Para corregir una solicitud real, escribe a soporte e identifica la cita sin incluir datos sensibles innecesarios. El historial puede desaparecer al borrar los datos del navegador o cambiar de dispositivo; no lo consideres comprobante ni único registro de la reparación. Conserva confirmaciones y referencias por separado. Consulta la política de privacidad y la guía de FTC para proteger información personal.</p>
+          <h3>Referencias</h3>
+          <ul class="footer-links">
+            <li>NauticFix, <a href="page6.html">Política de privacidad</a>.</li>
+            <li>Federal Trade Commission, <a href="https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business" target="_blank" rel="noopener noreferrer">Protecting Personal Information: A Guide for Business</a>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NauticFix Workshop</h3><p>Servicio náutico en Ceiba, Puerto Rico.</p></div>
+        <div><h3>Tu solicitud</h3><ul class="footer-links"><li><a href="page1.html">Solicitar servicio</a></li><li><a href="page3.html">Seguimiento</a></li></ul></div>
+        <div><h3>¿Necesitas ayuda?</h3><ul class="footer-links"><li><a href="page4.html">Centro de soporte</a></li><li><a href="mailto:soporte@nauticfixpr.com">Enviar un correo</a></li></ul></div>
+      </div>
+      <p><a href="page6.html">Política de privacidad</a> · <a href="page7.html">Términos del servicio</a></p>
+      <p class="copyright">© 2026 NauticFix · Paola Lopez · Universidad Interamericana, Recinto de Fajardo · <a href="mailto:paola9727@interfajardo.edu">paola9727@interfajardo.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>

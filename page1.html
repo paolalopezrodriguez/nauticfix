@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selecciona el servicio náutico y comparte los detalles de tu embarcación.">
+  <title>Solicitar servicio | NauticFix</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="homepage.html" aria-label="NauticFix, inicio">
+          <img class="brand-logo" src="imagenes/Frame%202%20(1).png" alt="">
+          <span class="brand-copy">
+            <strong>NauticFix</strong>
+            <span class="brand-tagline">Tu embarcación, en buenas manos</span>
+            <span class="brand-location">Servicio en Ceiba, Puerto Rico</span>
+          </span>
+        </a>
+        <div class="brand-copy">
+          <a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a>
+          <span>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</span>
+        </div>
+        <a class="support" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20NauticFix">Soporte prioritario →</a>
+      </div>
+      <nav id="mainNavigation" aria-label="Navegación principal">
+        <a class="button" href="homepage.html">Inicio</a>
+        <a class="button button-primary" href="page1.html" aria-current="page">Agendar cita</a>
+        <a class="button" href="page3.html">Seguimiento</a>
+        <a class="button" href="page4.html">Soporte</a>
+        <a class="button" href="page5.html">Mi cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Paso 1 de 3 · Solicitud de servicio</span>
+        <h1>Cuéntanos qué necesita tu embarcación</h1>
+        <p class="hero-copy">Selecciona un área de trabajo y comparte tus datos. Luego podrás elegir la fecha y hora de tu cita.</p>
+        <ol class="steps" aria-label="Pasos para reservar">
+          <li aria-current="step">Servicio y datos</li>
+          <li>Fecha y depósito</li>
+          <li>Confirmación y seguimiento</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-two">
+        <form class="card" id="serviceForm">
+          <h2>Detalles del servicio</h2>
+          <p>Los campos marcados son necesarios para preparar tu solicitud.</p>
+          <p>
+            <label for="service">Área de servicio</label><br>
+            <select id="service" name="service" required>
+              <option value="">Selecciona un servicio</option>
+              <option value="Motor">Motor</option>
+              <option value="Electricidad">Electricidad</option>
+              <option value="Casco">Casco</option>
+              <option value="Cubierta">Cubierta</option>
+              <option value="Limpieza">Limpieza</option>
+              <option value="Personalizado">Especificaciones personalizadas</option>
+            </select>
+          </p>
+          <p>
+            <label for="workType">Tipo de trabajo</label><br>
+            <select id="workType" name="workType" required>
+              <option value="">Selecciona el trabajo</option>
+              <option value="Inspección">Inspección</option>
+              <option value="Mantenimiento">Mantenimiento</option>
+              <option value="Reparación">Reparación</option>
+            </select>
+          </p>
+          <p>
+            <label for="serviceLocation">Ubicación de la inspección</label><br>
+            <select id="serviceLocation" name="serviceLocation" required>
+              <option value="">Selecciona una ubicación</option>
+              <option value="Marina">Dentro de una marina</option>
+              <option value="Fajardo">Fajardo, fuera de marina</option>
+              <option value="Otra">Otra área</option>
+            </select>
+          </p>
+          <p id="otherLocationField" hidden>
+            <label for="otherLocation">Indica el municipio o área</label><br>
+            <input id="otherLocation" name="otherLocation" type="text" maxlength="100">
+          </p>
+          <p id="customServiceField" hidden>
+            <label for="customService">Describe el servicio personalizado</label><br>
+            <input id="customService" name="customService" type="text" maxlength="120">
+          </p>
+          <p>
+            <label for="boat">Nombre o tipo de embarcación</label><br>
+            <input id="boat" name="boat" type="text" maxlength="100" placeholder="Ej. Sea Ray 240" required>
+          </p>
+          <p>
+            <label for="issue">¿Qué problema o trabajo necesitas?</label><br>
+            <textarea id="issue" name="issue" rows="4" maxlength="1000" required placeholder="Describe los síntomas, el mantenimiento o el trabajo que solicitas."></textarea>
+          </p>
+          <h2>Tu información de contacto</h2>
+          <p>
+            <label for="customerName">Nombre completo</label><br>
+            <input id="customerName" name="customerName" type="text" autocomplete="name" maxlength="100" required>
+          </p>
+          <p>
+            <label for="email">Correo electrónico</label><br>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="160" required>
+          </p>
+          <p>
+            <label for="phone">Teléfono</label><br>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required>
+          </p>
+          <p><button class="button button-primary" type="submit">Continuar para elegir cita</button></p>
+          <p id="serviceMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="card services">
+          <figure class="service-image">
+            <img src="imagenes/manrepair.jpg" alt="Técnico trabajando en el mantenimiento de una embarcación">
+            <figcaption>Atención para distintas necesidades náuticas</figcaption>
+          </figure>
+          <h2>¿Qué incluye la solicitud?</h2>
+          <ul class="steps">
+            <li>Detalles para que el taller entienda el trabajo solicitado.</li>
+            <li>Una cita que podrás seleccionar en el próximo paso.</li>
+            <li>Seguimiento de la solicitud desde tu cuenta.</li>
+          </ul>
+          <p class="deposit">Depósito para reservar la cita: $30.00. La inspección cuesta $0.00 dentro de marina, $100.00 en Fajardo fuera de marina y se cotiza por distancia en otras áreas.</p>
+          <p>El espacio de atraque en la marina y su costo corresponden al dueño o capitán, y no están incluidos. El taller puede tener demoras o interrupciones por huracanes, tormentas tropicales o avisos de temporal.</p>
+          <p>¿Tienes dudas? <a href="page4.html">Contacta con soporte</a>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="preparationTitle">
+      <div class="container">
+        <article class="card">
+          <h2 id="preparationTitle">Prepara la información de tu embarcación</h2>
+          <p>Para que el taller entienda tu solicitud, indica el tipo o modelo de la embarcación, el área que necesita atención y si buscas inspección, mantenimiento o reparación. Si conoces el año, la marca o el modelo del motor, inclúyelos. No es necesario diagnosticar la avería: explica qué observaste y cuándo comenzó. Señala si ocurre siempre o bajo ciertas condiciones, menciona ruidos, problemas de arranque, luces de advertencia o daños visibles y anota trabajos. Usa datos de contacto correctos para facilitar la coordinación. No incluyas contraseñas ni información bancaria. Consulta el manual de tu embarcación y las recomendaciones oficiales de seguridad.</p>
+          <h3>Referencias</h3>
+          <ul class="footer-links">
+            <li>U.S. Coast Guard, Recreational Boating Safety: <a href="https://www.uscgboating.org/" target="_blank" rel="noopener noreferrer">uscgboating.org</a>.</li>
+            <li>NauticFix, <a href="page7.html">Términos del servicio</a>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NauticFix Workshop</h3><p>Servicio náutico en Ceiba, Puerto Rico.</p></div>
+        <div><h3>Tu solicitud</h3><ul class="footer-links"><li><a href="page2.html">Agendar cita</a></li><li><a href="page3.html">Seguimiento</a></li></ul></div>
+        <div><h3>¿Necesitas ayuda?</h3><ul class="footer-links"><li><a href="page4.html">Centro de soporte</a></li><li><a href="mailto:soporte@nauticfixpr.com">Enviar un correo</a></li></ul></div>
+      </div>
+      <p><a href="page6.html">Política de privacidad</a> · <a href="page7.html">Términos del servicio</a></p>
+      <p class="copyright">© 2026 NauticFix · Paola Lopez · Universidad Interamericana, Recinto de Fajardo · <a href="mailto:paola9727@interfajardo.edu">paola9727@interfajardo.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>

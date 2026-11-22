@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Confirmación de tu solicitud de cita náutica.">
+  <title>Confirmación de cita | NauticFix</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="homepage.html" aria-label="NauticFix, inicio">
+          <img class="brand-logo" src="imagenes/Frame%202%20(1).png" alt="">
+          <span class="brand-copy"><strong>NauticFix</strong><span class="brand-tagline">Tu embarcación, en buenas manos</span><span class="brand-location">Servicio en Ceiba, Puerto Rico</span></span>
+        </a>
+        <div class="brand-copy"><a href="mailto:soporte@nauticfixpr.com">soporte@nauticfixpr.com</a><span>Lunes a viernes, 7:00 a.m. – 4:00 p.m.</span></div>
+        <a class="support" href="mailto:soporte@nauticfixpr.com?subject=Asistencia%20prioritaria%20NauticFix">Soporte prioritario →</a>
+      </div>
+      <nav id="mainNavigation" aria-label="Navegación principal">
+        <a class="button" href="homepage.html">Inicio</a>
+        <a class="button" href="page1.html">Agendar cita</a>
+        <a class="button" href="page3.html">Seguimiento</a>
+        <a class="button" href="page4.html">Soporte</a>
+        <a class="button" href="page5.html">Mi cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Confirmación de cita</span>
+        <h1>Detalle de tu cita</h1>
+        <p class="hero-copy">Revisa la fecha y los datos de la embarcación asociados a la solicitud guardada.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="card confirmation-message" id="confirmationMessage" role="status" aria-live="polite">
+          Cargando los datos de la cita...
+        </p>
+        <section class="card confirmation-card" id="appointmentConfirmation" aria-labelledby="confirmationTitle" hidden>
+          <div class="confirmation-heading">
+            <div>
+              <span class="eyebrow">Solicitud local</span>
+              <h2 id="confirmationTitle">Cita agendada</h2>
+            </div>
+            <span class="tracking-record-status is-current" id="confirmationStatus"></span>
+          </div>
+          <div class="confirmation-details">
+            <p><span>Número de referencia</span><strong id="confirmationReference"></strong></p>
+            <p><span>Embarcación</span><strong id="confirmationBoat"></strong></p>
+            <p><span>Servicio</span><strong id="confirmationService"></strong></p>
+            <p><span>Fecha y hora</span><strong id="confirmationSchedule"></strong></p>
+          </div>
+          <figure class="confirmation-boat-photo">
+            <img src="imagenes/boat.jpg" alt="Foto ilustrativa de una embarcación de referencia; no corresponde necesariamente a la embarcación registrada.">
+            <figcaption>Foto ilustrativa de referencia. La demo no permite cargar una foto propia de la embarcación.</figcaption>
+          </figure>
+          <div class="actions">
+            <a class="button button-primary" id="confirmationTrackingLink" href="page3.html">Ver seguimiento</a>
+            <a class="button" href="homepage.html">Volver al inicio</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NauticFix Workshop</h3><p>Servicio náutico en Ceiba, Puerto Rico.</p></div>
+        <div><h3>Tu solicitud</h3><ul class="footer-links"><li><a href="page1.html">Solicitar servicio</a></li><li><a href="page3.html">Seguimiento</a></li></ul></div>
+        <div><h3>¿Necesitas ayuda?</h3><ul class="footer-links"><li><a href="page4.html">Centro de soporte</a></li><li><a href="mailto:soporte@nauticfixpr.com">Enviar un correo</a></li></ul></div>
+      </div>
+      <p><a href="page6.html">Política de privacidad</a> · <a href="page7.html">Términos del servicio</a></p>
+      <p class="copyright">© 2026 NauticFix · Paola Lopez · Universidad Interamericana, Recinto de Fajardo · <a href="mailto:paola9727@interfajardo.edu">paola9727@interfajardo.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
